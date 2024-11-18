@@ -1,3 +1,4 @@
+account_number,transaction_type,amount,
 1001,Deposit,2000.00
 1001,Withdraw,500.00
 1005,Deposit,8000.00
