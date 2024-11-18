@@ -51,9 +51,11 @@ int authenticate_user(User* head, int account_number, const char* pin) {
     User* current = head;
     while (current) {
         if (current->account_number == account_number) {
-            char decrypted_pin[5];
-            decrypt_pin(current->encrypted_pin, decrypted_pin);
-            return strcmp(pin, decrypted_pin) == 0;
+           char encrypted_pin[5];
+            // Encrypt the plaintext PIN entered by the user
+            encrypt_pin(pin, encrypted_pin);  
+            // Compare the encrypted input PIN with the stored encrypted PIN
+            return strcmp(encrypted_pin, current->encrypted_pin) == 0;
         }
         current = current->next;
     }
