@@ -1,4 +1,4 @@
-balance
+username,account_number,encrypted_pin,balance
 JohnDoe,1001,9216,5000.00
 JaneSmith,1002,3054,3000.00
 AliceJohnson,1003,1894,1500.50
